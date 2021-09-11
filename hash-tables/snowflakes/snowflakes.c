@@ -25,7 +25,7 @@ int identical_left(int snow1[], int snow2[], int start) {
     return 1;
 }
 
-int are_indentical(int snow1[], int snow2[]) {
+int are_identical(int snow1[], int snow2[]) {
     int start;
     for (start = 0; start < 6; start ++) {
         if (identical_right(snow1, snow2, start)) {
@@ -42,7 +42,7 @@ void identify_identical(int snowflakes[][6], int n) {
     int i, j;
     for (i = 0; i < n; i++) {
         for (j = i+1; j < n; j++) {
-            if (are_indentical(snowflakes[i], snowflakes[j])) {
+            if (are_identical(snowflakes[i], snowflakes[j])) {
                 printf("Twin snowflakes found.\n");
                 return;
             }
